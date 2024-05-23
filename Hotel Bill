@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+float compute_bill(int num_nights, float room_rate, float mini_bar_total)
+{
+    return (num_nights*room_rate)+mini_bar_total;
+}
+
+void print_bill(int num_nights, float room_rate, float mini_bar_total)
+{
+    float total = compute_bill(num_nights, room_rate, mini_bar_total);
+    printf("Nights:    %d\n", num_nights);
+	printf("Room rate: $%6.2f\n", room_rate);
+	printf("Minibar:   $%6.2f\n", mini_bar_total);
+	printf("-----------------\n");
+	printf("Total:     $%6.2f", total);
+}
+
+int main()
+{
+
+    int number_of_nights;
+    float room_rate, minibar;
+    
+    printf("Number of nights? Room rate? Minibar?\n");
+    scanf("%d%f%f", &number_of_nights, &room_rate, &minibar);
+    
+	print_bill(number_of_nights, room_rate, minibar);
+	
+	return 0;
+
+}

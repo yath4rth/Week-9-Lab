@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+char to_upper(char c)
+{
+    if (c>='a' && c<='z')
+    {
+        return c-32;
+    }
+    else 
+    {
+        return '\0';
+    }
+}
+
+int main()
+
+{
+    
+    char c;
+    scanf(" %c", &c);
+	printf("Please enter a letter: %c", to_upper(c));
+	
+	return 0;
+
+}
